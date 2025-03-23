@@ -51,11 +51,11 @@ function findMostRecentBook(books) {
     return books.reduce((mostRecent, book) => new Date(book.published) < new Date(mostRecent.published) ? book : mostRecent);
 }
 
-function findIntersection(setA, setB) {
-    // 🪲 Bug: Incorrect logic
-    const intersection = new Set([...setA]);
-    return intersection;
-}
+    function findIntersection(setA, setB) {
+        // 🪲 Bug: Incorrect logic
+        const intersection = new Set([...setA].filter(item => setB.has(item)))
+        return intersection;
+    }
 
 async function navigateLabyrinth(directions) {
     for (let direction of directions) {
