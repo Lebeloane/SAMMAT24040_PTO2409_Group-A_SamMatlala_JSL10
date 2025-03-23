@@ -12,7 +12,7 @@ The Escape Vanilla JS Challenge is an interactive web-based project focusing on 
 
 ## What You Need to Do:
 
-1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/CodeSpace-Academy/Module_10_StudentNo_Classcode_Group_Name-Surname_JSL10
+1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/Lebeloane/SAMMAT24040_PTO2409_Group-A_SamMatlala_JSL10.git
 2. Open the cloned project in your code editor.
 3. Code your solution for each of the challenges as per the provided instructions.
 4. Commit your changes to your local Git repository with meaningful commit messages.
