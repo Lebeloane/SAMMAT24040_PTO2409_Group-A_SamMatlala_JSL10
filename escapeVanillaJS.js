@@ -33,18 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 🪲 Bug: Asynchronous function ?
-    document.getElementById("solveRoom3").addEventListener("click", () => {
-        fetch('directions.json') 
-            .then(response => response.json())
-            .then(directions => {
-                navigateLabyrinth(directions)
-                    .then(message => {
-                        // 🪲 Bug: Incorrect method
-                        document.getElementById("room3Result").innerHTML = message;
-                    });
-            });
+    document.getElementById("solveRoom3").addEventListener("click", async () => {
+         try {
+            const response = await fetch('directions.json');
+            const directions = await response.json();
+            const message = await navigateLabyrinth(directions);
+            // 🪲 Bug: Incorrect method
+            document.getElementById("room3Result").innerHTML = message;
+        } catch (error) {
+            console.error("Room 3 Error:", error);
+        }
+        });
     });
-});
 
 function findMostRecentBook(books) {
     // 🪲 Bug: Logic error
